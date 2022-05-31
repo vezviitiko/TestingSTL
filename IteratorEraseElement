@@ -1,4 +1,3 @@
-//#include "stdafx.h"
 #include <iostream>
 #include <tchar.h>
 #include <vector>
@@ -17,12 +16,14 @@ int _tmain (int argc, _TCHAR* argv [])
     }
     first = myVec.begin ();
     last = myVec.begin () + 5;
-    //cout << "last = " << *last <<endl;
+    cout << "last = " << *last <<endl;
+    cout << "end = " << *(myVec.end()-1) <<endl;
     if (last >= myVec.end ())
     {
+        cout << "here" << endl;
         return - 1;
     }
-    //cout << "last = " << *last <<endl;
+    cout << "last = " << *last <<endl;
     myVec.erase (first, last);
     for_each (myVec.begin (), myVec.end (), printInt);
     return 0;
